@@ -2,14 +2,9 @@
 
 return [
     'fetch' => PDO::FETCH_CLASS,
-    'default' => 'mysql',
+    'default' => 'main',
     'connections' => [
-        'sqlite' => [
-            'driver'   => 'sqlite',
-            'database' => __DIR__.'/../database/production.sqlite',
-            'prefix'   => '',
-        ],
-        'mysql' => [
+        'main' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'database'  => 'database',
@@ -17,25 +12,7 @@ return [
             'password'  => '',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-        ],
-        'pgsql' => [
-            'driver'   => 'pgsql',
-            'host'     => 'localhost',
-            'database' => 'database',
-            'username' => 'root',
-            'password' => '',
-            'charset'  => 'utf8',
-            'prefix'   => '',
-            'schema'   => 'public',
-        ],
-        'sqlsrv' => [
-            'driver'   => 'sqlsrv',
-            'host'     => 'localhost',
-            'database' => 'database',
-            'username' => 'root',
-            'password' => '',
-            'prefix'   => '',
+            'prefix'    => 'protyl_',
         ],
     ],
     'migrations' => 'migrations',
